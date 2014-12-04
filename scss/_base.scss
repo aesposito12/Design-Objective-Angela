@@ -1,0 +1,87 @@
+/* 
+Base Rules
+	A Base rule is applied to an element using an element selector, a descendent selector, or a child selector, along with any pseudoclasses. It doesn’t include any class or ID selectors. It is defining the default styling for how that element should look in all occurrences on the page.
+*/
+
+@mixin regular-body-font{
+font-family: "nimbus-sans",sans-serif;
+font-style: normal;
+font-weight: 400;
+}
+
+@mixin bold-body-font{
+font-family: "nimbus-sans",sans-serif;
+font-style: normal;
+font-weight: 700;
+}
+
+body{
+@include regular-body-font;
+    background-color: #afb2b1;
+    text-align: left;
+}
+.first{
+@include bold-body-font;
+    background-color:rgba(68, 85, 68, 0.33);
+    font-size:20px;
+}
+.quote{
+background-color:rgba(68, 85, 68, 0.33);
+    font-size: 20px;
+    border: 0 10 0 10;
+    color:white;
+}
+img{
+    max-width: 100%;
+    height: auto;   
+}
+
+header .title {
+    @include bold-body-font;
+font-size: 30px;
+    padding: 10px;
+    margins:10px;
+    background-color: rgb(108, 78, 58);
+    color: #afb2b1;
+    text-align: left;
+    
+}
+
+footer {
+background-color: rgb(108, 78, 58);
+    color:#afb2b1;
+    text-align: justify
+}
+//main,
+//main[role="main"],
+aside
+{
+font-size: 10px;
+background-color:rgb(108, 78, 58);
+    color:#afb2b1;
+}
+
+.bio-text
+{
+font-size: 12px;
+    border-bottom: 12px;
+}
+
+.bio-news{
+font-size: 12px;
+}
+
+p:first-of-type{
+margin-top: 0;
+}
+nav ul{
+list-style-type:none;
+margin:0;
+padding:0;
+color:#afb2b1;
+}
+
+nav ul li{
+display:inline-block;
+    margin-left: 12px;
+}
